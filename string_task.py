@@ -8,4 +8,4 @@ name = name.lower().title()
 wacky = wacky.upper()
 
 
-print ("It was %d o'clock when I heard a knock at the door. \n I opened the door and there was a %s with a note saying \"From %s \". \n Just as I closed the door I heard a scream \"%s\". I froze in place and all I could do was %s." % (int(time), noun, name, wacky, action))
+print ("\n\nIt was %d o'clock when I heard a knock at the door. \nI opened the door and there was a %s with a note saying \"From %s \". \nJust as I closed the door I heard a scream \"%s\". \nI froze in place and all I could do was %s." % (int(time), noun, name, wacky, action))
