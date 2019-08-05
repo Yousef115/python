@@ -26,4 +26,3 @@ if num1.isdigit() and num2.isdigit() == True:
 #else statement for the first if statement.
 else:
 	print ("Sorry, you input an invalid number.")
-	
