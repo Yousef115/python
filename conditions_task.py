@@ -16,10 +16,7 @@ if num1.isdigit() and num2.isdigit() == True:
 	elif operator == "*":
 		print ("The answer is: %d" %(num1 * num2))
 	elif operator == "/":
-		if num1 % num2 > 0:
-			print ("The answer is: %d with a remainder of %d" %(num1 / num2, num1 % num2))
-		else:
-			print ("The answer is: %d" %(num1 / num2))
+		print ("The answer is: %.2f" %(num1 / num2))
 	else:
 		print ("Sorry, you input an invalid operator.")
 
