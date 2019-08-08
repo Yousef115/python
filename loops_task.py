@@ -1,14 +1,11 @@
-
-itemDict = {}
-itemList = []
-# function to check if user input done or not
+#check if user typed done or not
 def check (isDone):
 	if isDone.lower() == "done":
 		return True
 	else:
 		return False
 
-#function to add items to the dictionary with item name as key, and the value is a list with price and quantity respectively.
+#add items from user to the itemDict{} dictionary, then cloning it to the itemList[] list so it can be printed at the end.
 def add_items():
 	userVar = ""
 	while check(userVar) != True:
@@ -19,9 +16,6 @@ def add_items():
 			itemDict["quantity"] = int(input("Quantity: "))
 			itemDict["price"] *= itemDict["quantity"]
 			itemList.append (itemDict.copy())
-			# print (itemDict)
-			# print ("item list content: ")
-			# print (itemList)
 
 
 # print function to loop through the items and calculate total then print out the receipt.
@@ -33,7 +27,9 @@ def print_receipt():
 		total += x["price"]
 	print("-------------------\nTotal: %.3f KD" %(total))
 
-# #Get input from user till they type 'done'
+#Calling functions to add items then print the invoice, and declaring the dictionary and list objects. 
+itemDict = {}
+itemList = []
 add_items()
 
 print_receipt()
