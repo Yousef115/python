@@ -1,5 +1,6 @@
 
-itemList = {}
+itemDict = {}
+itemList = []
 # function to check if user input done or not
 def check (isDone):
 	if isDone.lower() == "done":
@@ -13,21 +14,26 @@ def add_items():
 	while check(userVar) != True:
 		userVar = input("Input item or \'done\' to finish: ")
 		if check(userVar) == False:
-			price = float(input("Price: "))
-			qty = int(input("Quantity: "))
-			price *= qty
-			itemList[userVar] = [price, qty]
+			itemDict["name"] = userVar
+			itemDict["price"] = float(input("Price: "))
+			itemDict["quantity"] = int(input("Quantity: "))
+			itemDict["price"] *= itemDict["quantity"]
+			itemList.append (itemDict.copy())
+			# print (itemDict)
+			# print ("item list content: ")
+			# print (itemList)
+
 
 # print function to loop through the items and calculate total then print out the receipt.
 def print_receipt():
 	total = 0
 	print ("-------------------\nreceipt\n-------------------\n")
-	for key in itemList:
-		print ("%d %s %.3f KD" %(itemList[key][1], key, itemList[key][0] ))
-		total += itemList[key][0]
+	for x in itemList:
+		print ("%d %s %.3f KD" %(x["quantity"], x["name"], x["price"] ))
+		total += x["price"]
 	print("-------------------\nTotal: %.3f KD" %(total))
 
-#Get input from user till they type 'done'
+# #Get input from user till they type 'done'
 add_items()
 
 print_receipt()
