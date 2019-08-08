@@ -17,7 +17,6 @@ def add_items():
 			itemDict["price"] *= itemDict["quantity"]
 			itemList.append (itemDict.copy())
 
-
 # print function to loop through the items and calculate total then print out the receipt.
 def print_receipt():
 	total = 0
@@ -30,6 +29,7 @@ def print_receipt():
 #Calling functions to add items then print the invoice, and declaring the dictionary and list objects. 
 itemDict = {}
 itemList = []
+
 add_items()
 
 print_receipt()
