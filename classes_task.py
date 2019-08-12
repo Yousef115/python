@@ -36,10 +36,8 @@ menu = """Choose an action to do:
 	4. add a manager
 	5. exit
 """
-Joey = employee("Joey", 24, 500, 2018)
-Yousef = manager("Joey", 44, 1000, 2009, 0.5)
-employees_list = [Joey]
-managers_list = [Yousef]
+employees_list = []
+managers_list = []
 
 
 def print_employees():
